@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery plugin stretchTable -- Make table columns scrollable and stretchable</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/960.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.stretchTable.css" />
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css" media="screen">
+    body {
+      background-color: #ecf5f9;
+      font: 14px/21px Helvetica, Arial, sans-serif;
+    }
+    a { color: #4278B8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    p { margin-bottom: 1em; }
+    .container_12 {
+      margin: 50px auto;
+    }
+    .grid_4, .grid_8 {
+      height: 230px;
+      background-color: #fff;
+      border-top: 1px solid #fff;
+      -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+      box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    }
+    .intro, .stretch_table {
+      padding: 15px;
+    }
+    .intro h1 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 14px;
+      line-height: 1.4em;
+      color: #666;
+    }
+    
+  </style>
+  
+</head>
+<body>
+  <div class="container_12">
+    <div class="grid_4">
+      <div class="intro">
+        <h1>jQuery.stretchTable</h1>
+        <p>jQuery.stretchTable make your table columns stretchable/scrollable/paginated. <br />Thus you can put as many columns as you want into a limited room. <br />Also you can fixed some columns, *only work with the first column for now*.</p>
+        <p>Find the latest code in <a href="http://">github</a></p>
+      </div>
+    </div>
+    
+    <div class="grid_8">
+      
+      <div id="stretch_table_demo" class="stretch_table">
+        <table>
+          <thead>
+            <tr>
+              <th class="rb">Name</th>
+              <th>Images URL</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Brand</th>
+              <th>Made In</th>
+              <th>Date of Production</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rb">Steven by Steve Madden ‘Maryn’ Boot</td>
+              <td>http://g.nordstromimage/im... </td>
+              <td>Wrapped wedge heel lifts a tren...</td>
+              <td>Shoes</td>
+              <td>$129.99</td>
+              <td>Steve Madden</td>
+              <td>China</td>
+              <td>12/29/2011</td>
+            </tr>
+            <tr>
+              <td class="rb">Converse Chuck Taylor® ‘Trompe L... </td>
+              <td>http://g.nordstromimage/im... </td>
+              <td>Screen printed laces play up the...</td>
+              <td>Shoes</td>
+              <td>$129.99</td>
+              <td>Steve Madden</td>
+              <td>China</td>
+              <td>12/29/2011</td>
+            </tr>
+            <tr>
+              <td class="rb">Kenneth Cole ‘925 - Silver Fox’ Pump</td>
+              <td>http://g.nordstromimage/im... </td>
+              <td>Reflective metallic heel offers ey...</td>
+              <td>Shoes</td>
+              <td>$129.99</td>
+              <td>Steve Madden</td>
+              <td>China</td>
+              <td>12/29/2011</td>
+            </tr>
+            <tr>
+              <td class="rb">‘Highlands’ Chukka Boot</td>
+              <td>http://g.nordstromimage/im... </td>
+              <td>Waxed twill fashions a stylish la...</td>
+              <td>Shoes</td>
+              <td>$129.99</td>
+              <td>Steve Madden</td>
+              <td>China</td>
+              <td>12/29/2011</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="stretch_table_nav with_table">
+          <a href="#" id="prev" class="prev_next">&larr; Previous</a>
+          <div id="pager"></div>
+          <a href="#" id="next" class="prev_next">Next &rarr;</a>
+        </div><!-- .stretch_table_nav -->                                         
+      </div><!-- .stretch_table -->
+          
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.stretchTable.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#stretch_table_demo').stretchTable({
+          prev: '#prev',
+          next: '#next',
+          pagination: "#pager",
+          perPage: 2
+      });
+    });
+  </script>
+</body>
+</html>

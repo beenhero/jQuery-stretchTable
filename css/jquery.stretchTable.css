@@ -1,0 +1,105 @@
+/* .stretch_table
+================================================== */
+.stretch_table table {
+  border: 1px solid #d9e0e5;
+  width: 100%; /* full-width to its container */
+}
+.stretch_table thead tr{
+  background-color: #fafbfc;
+}
+.stretch_table td, .stretch_table th{
+  font-size: 12px;
+  text-align: left;
+  color: #666;
+  padding: 5px;
+  border-bottom: 1px solid #d9e0e5;
+}
+.stretch_table th {
+  font-weight: bold;
+}
+.stretch_table .rb {
+  border-right: 1px solid #d9e0e5;
+}
+.stretch_table td:first-child {
+  width: 220px; /* Adjust by yourself  */
+}
+
+/* .stretch_table_nav
+================================================== */
+.stretch_table_nav {
+  margin-bottom: 20px;
+  padding: 5px 0;
+  position: relative;
+}
+.stretch_table_nav #pager {
+  text-align: center;
+}
+.stretch_table_nav #prev {
+  position: absolute;
+  left: 5px;
+}
+.stretch_table_nav #next {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.stretch_table_nav a {
+  display: inline-block;
+  text-indent: -999em;
+  *font-size: 0;
+  *line-height: 0;
+  *text-indent: 0; /* IE7 hack */
+  vertical-align: middle;
+  margin-right: 3px;
+  height: 6px;
+  width: 6px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: #c1c1c1;
+}
+.stretch_table_nav a:hover, .stretch_table_nav a.selected {
+  background-color: #666;
+}
+.stretch_table_nav a.prev_next {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background: transparent url('../images/pager-arrow.png') no-repeat;
+}
+.stretch_table_nav a#next {
+  background-position: -20px -20px;
+}
+.stretch_table_nav a#prev {
+  background-position: 0 -20px;
+}
+.stretch_table_nav a#next.disabled {
+  background-position: -20px 0;
+}
+.stretch_table_nav a#prev.disabled {
+  background-position: 0 0;
+}
+.stretch_table_nav a.prev_next:hover {
+  background-color: #ccc;
+}
+.stretch_table_nav a.prev_next.disabled:hover {
+  background-color: transparent;
+}
+.stretch_table_nav a.prev_next.disabled {
+  cursor: text;
+}
+
+.stretch_table_nav.with_table {
+  border: 1px solid #d9e0e5;
+  border-top: none;
+  background-color: #fafbfc;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 357px;  /* Adjust by yourseft */
+  float: right;
+}
