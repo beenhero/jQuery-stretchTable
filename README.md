@@ -11,11 +11,11 @@ A jQuery plugin to make table columns stretchable, navigating extra columns with
 2. Wire up in your html.
 3. Stretch your table.
 
-``` js
-$(document).ready(function() {
-  $('#your_stretch_table_id').stretchTable();
-});
-```
+  ``` js
+  $(document).ready(function() {
+    $('#your_stretch_table_id').stretchTable();
+  });
+  ```
 
 4. Customizing styles meet your design.
 
