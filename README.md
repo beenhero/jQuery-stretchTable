@@ -1,7 +1,8 @@
 jQuery.StretchTable
 ===================
 
-A jQuery plugin to make table columns stretchable, navigating extra columns with pagination UI. see [demo](http://jquery-stretchtable.beenhero.com/).
+
+A jQuery plugin to make table columns stretchable, navigating extra columns with pagination UI. see [demo](http://beenhero.github.com/jQuery-stretchTable/).
 
 
 ## How to use?
